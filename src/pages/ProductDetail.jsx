@@ -26,7 +26,7 @@ export default function ProductDetail() {
               src='/images/avatar/large/steve.jpg'
             />
             <Card.Header>{product.productName}</Card.Header>
-            <Card.Meta>{product.category.categoryName}</Card.Meta>
+            <Card.Meta>{product.category?.categoryName}</Card.Meta>
             <Card.Description>
                wants to add you to the group <strong>best friends</strong>
             </Card.Description>
