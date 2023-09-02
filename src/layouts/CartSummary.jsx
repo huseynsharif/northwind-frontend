@@ -5,23 +5,27 @@ import { Button, Container, Dropdown, DropdownDivider, Label, Menu } from 'seman
 
 export default function CartSummary() {
 
-const {cartItems} = useSelector(state => state.cart)
-
+  const { cartItems } = useSelector((state) => state.cart);
+  
   return (
     <div><Dropdown item text='Sepetiniz'>
-    <Dropdown.Menu>
-      {
-        cartItems.map((cartItem)=>
-          <Dropdown.Item>{cartItem.product.productName}
-            <Label>{cartItem.quantity}</Label>
-          </Dropdown.Item>
-        )
-      }
-      
-      <Dropdown.Divider/>
-      <Dropdown.Item as={NavLink} to="/cart">Sepete git</Dropdown.Item>
-      
-    </Dropdown.Menu>
-  </Dropdown></div>
+      <Dropdown.Menu>
+        {
+          cartItems.map((cartItem) => {
+
+            return (
+              <Dropdown.Item>{cartItem.product.productName}
+                <Label>{cartItem.quantity}</Label>
+              </Dropdown.Item>
+            )
+          }
+          )
+        }
+
+        <Dropdown.Divider />
+        <Dropdown.Item as={NavLink} to="/cart">Sepete git</Dropdown.Item>
+
+      </Dropdown.Menu>
+    </Dropdown></div>
   )
 }

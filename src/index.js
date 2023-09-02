@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { configureStore } from './store/configureStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const store = configureStore()
+const store = configureStore
 root.render(
   // <React.StrictMode>
   <Provider store={store}>
