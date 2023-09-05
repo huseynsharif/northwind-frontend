@@ -6,9 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from './store/configureStore';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const store = configureStore
+const store = configureStore()
 root.render(
   // <React.StrictMode>
   <Provider store={store}>
